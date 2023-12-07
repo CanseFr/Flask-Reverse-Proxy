@@ -2,12 +2,12 @@
 
 Nous allons ici mettre en place un reverse proxy tres simpel a l'aide de Nginx Proxy Manager pour deployer des container de type Flask(python).
 
-### Introduction
+## Introduction
 
-*Scalling horizontal* : \
+**Scalling horizontal** : \
 Le "Scaling horizontal" (mise à l'échelle horizontale) est une technique de gestion de la charge dans laquelle de nouvelles instances ou serveurs sont ajoutés à un système ou une application existante afin de répartir la charge de manière équilibrée. Cette approche vise à améliorer les performances et la disponibilité en permettant au système de gérer un plus grand nombre de requêtes ou d'utilisateurs tout en maintenant une qualité de service élevée. Elle est souvent utilisée dans les environnements informatiques cloud et les applications Web pour garantir une extensibilité efficace.
 
-*Scalling vertical* : \
+**Scalling vertical** : \
 Le "Scaling vertical" (mise à l'échelle verticale) est une technique de gestion de la charge dans laquelle les ressources d'un serveur ou d'une instance existante sont augmentées, généralement en ajoutant plus de puissance de calcul, de mémoire ou d'autres ressources matérielles. Contrairement au "Scaling horizontal" qui consiste à ajouter davantage de serveurs ou d'instances, le scaling vertical implique d'optimiser les ressources d'une seule machine pour améliorer ses performances. Cela peut être utile pour des charges de travail spécifiques qui nécessitent plus de ressources, mais il peut atteindre une limite en termes de capacité matérielle disponible sur une seule machine.
 
 Il est important de placer le .env de le gitignore pour pas publier nos informations personnel, !
@@ -59,7 +59,7 @@ CMD ["python", "./app.py"]
 
 Ici nous allons desactiver les parametre en rapport avec le ssl et le https pour ne pas rallonger ce tutoriel.
 
-```docker-compose
+```yaml
 version: '3.8'
 
 services:
@@ -136,7 +136,7 @@ Puis consulter l'url :
 http://localhost:81/login
 ```
 
-Connectez vous :
+**Connectez vous :**
 
 Email:    admin@example.com \
 Password: changeme
